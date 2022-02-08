@@ -41,7 +41,7 @@ function getCurrentState(state) { //it's name should be mapStateToProps ! what a
 function mapDispatchToProps(dispatch) {
   
     return { addTodo : text => dispatch(actionCreators.addTodo(text))};
-
+    //redux-tolkit을 쓰면 text는 payload안에 위치
 }
 //connect : Home으로 보내는 props에 추가 될 수 있도록 허용
 //connect have two params 1.mapStateToProps 2. mapDispatchToProps
