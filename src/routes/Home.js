@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from "react-redux";
-import { actionCreators } from "../store";
+import { add } from "../store";
 import Todo from '../components/Todo';
 
 function Home({todos,/*dispatch*/addTodo}) {
@@ -40,7 +40,7 @@ function getCurrentState(state) { //it's name should be mapStateToProps ! what a
 
 function mapDispatchToProps(dispatch) {
   
-    return { addTodo : text => dispatch(actionCreators.addTodo(text))};
+    return { addTodo : text => dispatch(add(text))};
     //redux-tolkit을 쓰면 text는 payload안에 위치
 }
 //connect : Home으로 보내는 props에 추가 될 수 있도록 허용
